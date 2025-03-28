@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,7 @@ public class AIController {
 		this.aiService = aiService;
 	}
 	
-	@PostMapping("/description")
+	@GetMapping("/description")
 	public ResponseEntity<String> uploadDescription (@RequestParam("job-description") String jd) {
 		
 		return ResponseEntity.status(HttpStatus.OK).body(aiService.processJobDescription(jd));
