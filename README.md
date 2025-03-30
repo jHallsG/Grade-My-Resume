@@ -14,4 +14,5 @@ This application requires the following before running :
 | Method | Endpoint | Description |
 |----------|----------|----------|
 | GET  | /description  | Accepts a String of user input. The job description is provided here.  |
+| GET  | /ask  | Accepts a String of user input. The user can ask any questions relating to the provided resume like what areas to improve, ATS friendliness, etc...  |
 | POST  | /upload  | Accepts pdf, docx, or txt files. Provide the resume / cv file here.  |
