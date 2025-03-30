@@ -32,4 +32,10 @@ public class AIController {
 		
 		return ResponseEntity.status(HttpStatus.OK).body(aiService.processFile(file));
 	}
+	
+	@GetMapping("/ask")
+	public ResponseEntity<String> questions (@RequestParam("prompt") String userPrompt) {
+		
+		return ResponseEntity.status(HttpStatus.OK).body(aiService.askAI(userPrompt));
+	}
 }

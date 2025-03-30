@@ -8,5 +8,6 @@ public interface AIServices {
 	
 	String processJobDescription(String jobDescription);
 	String processFile(MultipartFile file) throws IOException;
+	String askAI(String userPrompt);
 
 }
